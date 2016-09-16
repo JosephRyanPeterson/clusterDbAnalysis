@@ -55,7 +55,7 @@ python -c 'import Bio'
 if [ $? -ne 0 ]; then
     echo ""
     echo "ERROR: Unable to find required package Biopython (Bio). This package is needed for many IO and graphics operations in ITEP"
-    echo "It can be downloaded from http://biopython.org or installed (via setuptools) with sudo easy_install -f http://biopython.org/DIST/ biopython"
+    echo "It can be downloaded from http://biopython.org or installed (via setuptools) with sudo pip install biopython"
     echo ""
     $STATUS=1;
 fi
@@ -64,7 +64,7 @@ python -c 'import ete3'
 if [ $? -ne 0 ]; then
     echo ""
     echo "ERROR: Unable to find required package ETE (ete3). This package is needed for any tree manipulation in ITEP"
-    echo "It can be downloaded at http://etetoolkit.org/ or installed (via setuptools) with sudo easy_install -U ete3"
+    echo "It can be downloaded at http://etetoolkit.org/ or installed (via setuptools) with sudo pip install ete3"
     echo ""
     $STATUS=1;
 fi
@@ -73,7 +73,7 @@ python -c 'import ruffus'
 if [ $? -ne 0 ]; then
     echo ""
     echo "ERROR: Unable to find required package ruffus (ruffus). This package is needed for parallelizing BLAST and RPSBlast calls"
-    echo "It can be downlaoded at http://www.ruffus.org.uk/ or installed (via setuptools) with sudo easy_install -U ruffus"
+    echo "It can be downlaoded at http://www.ruffus.org.uk/ or installed (via setuptools) with sudo pip install ruffus"
     echo ""
     $STATUS=1;
 fi
