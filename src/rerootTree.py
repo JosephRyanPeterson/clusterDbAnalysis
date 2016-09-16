@@ -5,7 +5,7 @@ import fileinput
 import optparse
 import sys
 
-from ete2 import Tree
+from ete3 import Tree
 
 from TreeFuncs import *
 

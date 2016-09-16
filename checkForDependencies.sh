@@ -60,11 +60,11 @@ if [ $? -ne 0 ]; then
     $STATUS=1;
 fi
 
-python -c 'import ete2'
+python -c 'import ete3'
 if [ $? -ne 0 ]; then
     echo ""
-    echo "ERROR: Unable to find required package ETE (ete2). This package is needed for any tree manipulation in ITEP"
-    echo "It can be downloaded at http://ete.cgenomics.org/ or installed (via setuptools) with sudo easy_install -U ete2"
+    echo "ERROR: Unable to find required package ETE (ete3). This package is needed for any tree manipulation in ITEP"
+    echo "It can be downloaded at http://etetoolkit.org/ or installed (via setuptools) with sudo easy_install -U ete3"
     echo ""
     $STATUS=1;
 fi

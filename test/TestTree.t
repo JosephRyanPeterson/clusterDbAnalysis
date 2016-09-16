@@ -4,7 +4,7 @@
 '''Test suite for tree functions'''
 import unittest
 from TreeFuncs import *
-from ete2 import Tree, PhyloTree
+from ete3 import Tree, PhyloTree
 
 class RerootTreeTester(unittest.TestCase):
     def setUp(self):

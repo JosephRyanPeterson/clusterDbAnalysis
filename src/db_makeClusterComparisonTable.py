@@ -66,7 +66,7 @@ if options.all:
         geneids += list(clusterrun_to_genes[clusterrun])
     geneids = set(geneids)
 elif options.newick:
-    from ete2 import Tree
+    from ete3 import Tree
     from TreeFuncs import *
     newick_str = "".join( [ line.strip("\r\n") for line in fileinput.input("-") ] )
     t = Tree(newick_str)

@@ -5,7 +5,7 @@
 import unittest
 from CoreGeneFunctions import *
 from TreeFuncs import *
-from ete2 import Tree
+from ete3 import Tree
 
 class CoreTester(unittest.TestCase):
     def setUp(self):

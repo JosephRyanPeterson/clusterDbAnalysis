@@ -82,7 +82,9 @@ if options.savepng:
 # Import lots of stuff for drawing...
 ####################################
 
-from ete2 import Tree, faces, TreeStyle, NodeStyle, AttrFace, ClusterTree, ProfileFace
+from ete3 import Tree
+from ete3.treeview import faces, TreeStyle, NodeStyle, AttrFace, ProfileFace
+from ete3.clustering import ClusterTree
 import fileinput
 import sqlite3
 from TreeFuncs import *
@@ -150,7 +152,7 @@ if options.datafile is not None:
     # I could generate this in situ... for now I just have a file I like and run with it.
     # This doesn't match exactlty becuase I don't have the time or motivation now to mess with QT to do it.
     # It should be pretty close though...
-    from ete2 import ImgFace
+    from ete3 import ImgFace
     imgloc = os.path.join(locateRootDirectory(), "src", "internal", "Colormap.png")
     F1 = faces.TextFace("Minimum: %1.1f" %(matrix_min), ftype="Times", fsize=32 )
     F2 = faces.ImgFace(imgloc)

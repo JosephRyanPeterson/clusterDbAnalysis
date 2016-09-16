@@ -4,7 +4,8 @@
 (common operations used by our scripts)'''
 
 from __future__ import print_function
-from ete2 import Tree, faces, TreeStyle, NodeStyle, AttrFace, TextFace
+from ete3 import Tree 
+from ete3.treeview import faces, TreeStyle, NodeStyle, AttrFace, TextFace
 from sanitizeString import *
 import re
 import sys

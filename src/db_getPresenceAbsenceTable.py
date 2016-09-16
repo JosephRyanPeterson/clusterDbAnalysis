@@ -32,7 +32,8 @@ Only return genes originating from ITEP (it is assumed that only ITEP genes matc
 (options,args) = parser.parse_args()
 
 def treeorder(treefile):
-    from ete2 import Tree, faces, TreeStyle, NodeStyle, AttrFace
+    from ete3 import Tree
+    from ete3.treeview import faces, TreeStyle, NodeStyle, AttrFace
     t = Tree(treefile)
     rt = t.get_tree_root()
     nameorder = []

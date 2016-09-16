@@ -44,7 +44,7 @@ def sanitizeByType(container, sanitizeby='tsv', onlycolumns=False):
                 newline=[sanitizeString(item.strip("\r\n"), False) for item in line.split("\t")]
             print("\t".join(newline))
     if sanitizeby=='newick':
-        from ete2 import Tree
+        from ete3 import Tree
         t=Tree("".join(container))
         for l in t:
             l.name=sanitizeString(l.name, False)

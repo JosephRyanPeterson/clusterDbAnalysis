@@ -50,8 +50,9 @@ from ClusterFuncs import *
 from sanitizeString import *
 
 import numpy
-from ete2 import Tree, faces, TreeStyle, TextFace, PhyloTree
-from ete2 import Phyloxml, phyloxml
+from ete3 import Tree, PhyloTree
+from ete3.treeview import faces, TreeStyle, TextFace
+from ete3 import Phyloxml, phyloxml
 
 
 def regionlength(genelocs):

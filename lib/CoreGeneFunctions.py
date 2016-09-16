@@ -13,7 +13,7 @@ from sanitizeString import *
 # import errors (e.g. if you're missing mysql interfaces for phylomedb)
 tmp = sys.stdout
 sys.stdout = sys.stderr
-from ete2 import TextFace
+from ete3.treeview import TextFace
 sys.stdout = tmp
 
 def addCoreDataToTree(ete_tree, runid, sanitized = False, any_org = False, all_org = False, only_org = False, none_org = False, uniq_org = False, color = "Black", compare_to_adj_clade = False):
@@ -23,7 +23,7 @@ def addCoreDataToTree(ete_tree, runid, sanitized = False, any_org = False, all_o
     Optionally (with compare_to_adj_clade) instead of comparing to the organisms in the whole tree,
     we compare to only the organisms in the sister clade at each node.
 
-    See http://packages.python.org/ete2/reference/reference_treeview.html#color-names for a list
+    See http://etetoolkit.org/docs/latest/reference/reference_treeview.html#color-names for a list
     of valid color names.'''
 
     cl = getClusterOrgsByRun(runid)

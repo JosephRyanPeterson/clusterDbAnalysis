@@ -7,7 +7,7 @@ import sqlite3
 import sys
 import csv
 
-from ete2 import Tree, TextFace, CircleFace
+from ete3 import Tree, TextFace, CircleFace
 
 from CoreGeneFunctions import *
 from ClusterFuncs import *
