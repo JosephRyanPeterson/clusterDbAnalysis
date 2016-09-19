@@ -132,7 +132,7 @@ def draw_tree_regions(clusterrunid, t, ts, cur, greyout=3, tempdir=None, label=F
         sys.stderr.write("Making region drawing for gene ID %s...\n" %(newname))
         imgfileloc = make_region_drawing(genelocs, getcolor, newname, maxwidth, tempdir=tempdir, label=label)
         imageFace = faces.ImgFace(imgfileloc)
-        leaf.add_face(imageFace, column=2, position = 'aligned')
+        leaf.add_face(imageFace, column=1, position = 'aligned')
 
     #add legend for clusters
     ts = treelegend(ts, getcolor, greyout, clusterrunid, cur)
@@ -172,7 +172,7 @@ def treelegend(ts, getcolor, greyout, clusterrunid, cur):
         #drop grey ones
         if color == '#7f7f7f': 
             #offset the greys
-            col = (gnum%greycols) + colorcols + 1 + 1 #offset from colors and grey def
+            col = (gnum%greycols) + colorcols + 1 #offset from colors and grey def
             gnum += 1
             # For gray boxes we don't care what the function is.
             text = treelegendtext(cluster, color)
@@ -183,7 +183,7 @@ def treelegend(ts, getcolor, greyout, clusterrunid, cur):
             text = treelegendtext(str(cluster) + ": " + samplefunc[0:63], color)
         #placement of this legend
         ts.legend.add_face(text, column=col)
-    ts.legend.add_face(treelegendtext("> %s occurrences        < or = %s occurrences " % (greyout, greyout),'#FFFFFF'), column=colorcols + 1)
+    ts.legend.add_face(treelegendtext("> %s occurrences        < or = %s occurrences " % (greyout, greyout),'#FFFFFF'), column=colorcols)
     return ts
 
 if __name__ == "__main__":
